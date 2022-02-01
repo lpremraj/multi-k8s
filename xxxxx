@@ -1,0 +1,62 @@
+  618  helm upgrade --install ingress-nginx ingress-nginx --repo http://kubernetes.github.io/ingress-nginx --nam
+  620  helm upgrade --install ingress-nginx ingress-nginx --repo http://kubernetes.github.io/ingress-nginx --namespace ingress-nginx --create-namespace
+  626  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.1.1/deploy/static/provider/cloud/deploy.yaml
+  667  kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.4.0/aio/deploy/recommended.yaml
+  713  cat .git
+  714  git remote -v
+  715  git remote remove origin
+  721  git remote add origin git@github.com/lpremraj/multi-k8s.git
+  722  git push origin master
+  723  git remote add origin git@github.com:lpremraj/multi-k8s.git
+  724  git remote remove origin
+  725  git remote add origin git@github.com:lpremraj/multi-k8s.git
+  726  git remote -v
+  727  git push origin main
+  728  git push 
+  729  git push origin master
+  730  git remote remove origin
+  731  git remote add origin https://github.com/lpremraj/multi-k8s.git
+  732  git push -u origin main
+  733  git push -u origin master
+  749  git push -u origin master
+  760  cd .git
+  764  git push -u origin master
+  770  git init
+  772  git remove -v
+  773  git remote -v
+  774  git push -u origin master
+  775  git add k8s/
+  776  git push -u origin master
+  777  git commit -m "adding k8s"
+  778  git push -u origin master
+  803  cd git
+  808  ls -l github*
+  814  vi github-pat
+  815  cat github-pat 
+  821  git status
+  822  git commit -a
+  823  git commit -a
+  824  git push
+  825  git login 
+  829  git config --global user.name lpremraj
+  830  git config --global user.email lpremraj@gmail.com
+  831  git config -l
+  836  git push origin master
+  838  cat ~/tokens/github-pat 
+  839  git push https://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@github.com/lpremraj/multi-k8s.git origin master
+  840  git push https://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@github.com/lpremraj/multi-k8s.git origin main
+  842  git remote -v
+  843  git push https://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@github.com/lpremraj/multi-k8s.git origin main
+  844  git push -u origin master
+  845  git push -u  https://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@github.com/lpremraj/multi-k8s.git origin main
+  846  git push -u  https://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@github.com/lpremraj/multi-k8s.git origin master
+  847  git push -u  https://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@github.com/lpremraj/multi-k8s.git  master
+  848  git status
+  905  curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+  914  helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+  940  git status
+  941  git add .
+  942  git commit -m "added deployment scripts"
+  943  git push origin master
+  944  history git |grep git  > xxxxx
+  945  history  |grep git  > xxxxx
