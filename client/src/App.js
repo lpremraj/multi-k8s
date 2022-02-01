@@ -11,15 +11,8 @@ function App() {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React 3
-          </a>
-          <Link to="/">The Home</Link>
+          <h1 className="App-title"> Fib Calculator verion Kubenetes! </h1>
+          <Link to="/">Home</Link>
           <Link to="/otherpage">Some Other Future Page</Link>
         </header>
         <div>
