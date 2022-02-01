@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+
+kind: Certificate
+metadata:
+  name: devopsngi-com-tls
+spec:
+  secretName: devopsngi-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: devopsngi.com
+  dnsNames:
+    - devopsngi.com
+    - www.devopsngi.com
