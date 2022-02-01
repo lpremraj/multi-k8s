@@ -15,7 +15,7 @@ before_install:
   - gcloud config set compute/zone asia-south1-a
   - gcloud container clusters get-credentials  multi-k8s
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t lpremraj/react-test -f ./client/Dockerfile.dev
+  - docker build -t lpremraj/react-test -f ./client/Dockerfile.dev ./client
 script:
   - docker run -e CI=true lpremraj/react-test npm test
 
@@ -25,7 +25,7 @@ after_success:
   - docker build -t lpremraj/multi-server-10-14 ./server
   - docker build -t lpremraj/multi-worker-10-14 ./worker
   # Log in to the docker CLI
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   # Take those images and push them to docker hub
   - docker push lpremraj/multi-client-10-14
   - docker push lpremraj/multi-nginx-10-14
