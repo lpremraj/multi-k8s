@@ -6,18 +6,18 @@ env:
     - SHA=$(git rev-parse HEAD)
     - CLOUDSDK_CORE_DISABLE_PROMPTS=1
 before_install:
-  - openssl aes-256-cbc -K $encrypted_a16a01bc6a49_key -iv $encrypted_a16a01bc6a49_iv -in multi-k8s-serice-account-token1.json.enc -out multi-k8s-serice-account-token1.json -d
+  - openssl aes-256-cbc -K $encrypted_c571ed7fed5e_key -iv $encrypted_c571ed7fed5e_iv -in multi-k8s-340301-b1f3650546f8.json.enc -out multi-k8s-340301-b1f3650546f8.json -d
   - curl http://sdk.cloud.google.com |bash > /dev/null
   - source $HOME/google-cloud-sdk/path.bash.inc
   - gcloud components update kubectl
-  - gcloud auth activate-service-account --key-file multi-k8s-serice-account-token1.json
-  - gcloud config set project multi-k8s-339919
+  - gcloud auth activate-service-account --key-file multi-k8s-340301-b1f3650546f8.json
+  - gcloud config set project multi-k8s-340301 
   - gcloud config set compute/zone asia-south1-a
-  - gcloud container clusters get-credentials  multi-k8s
+  - gcloud container clusters get-credentials  multi-cluster
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t premium/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t premrajai/react-test -f ./client/Dockerfile.dev ./client
 script:
-  - docker run -e CI=true premium/react-test npm test
+  - docker run -e CI=true premrajai/react-test npm test
 
 deploy:
   provider: script
